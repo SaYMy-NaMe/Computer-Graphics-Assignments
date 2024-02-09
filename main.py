@@ -14,16 +14,36 @@ def slope_less_than_one(point1, point2):
         all_p.append(p)
         x += 1
         if p < 0:
-            p = p + 2*dy
+            p = p + 2 * dy
         else:
-            p = p + 2*dy - 2*dx
+            p = p + 2 * dy - 2 * dx
             y += 1
-    print(all_points)
-    print(all_p)
+    print("Intermediate Points are: ", all_points)
+    print("Decision Parameters are: ", all_p)
 
 
 def slope_greater_than_one(point1, point2):
     print('Slope is greater or equal one')
+    all_points = []
+    all_p = []
+    x1, y1 = point1
+    x2, y2 = point2
+    x, y = x1, y1
+    dy = y2 - y1
+    dx = x2 - x1
+    p = 2 * dx - dy
+
+    while y <= y2:
+        all_points.append((x, y))
+        all_p.append(p)
+        y += 1
+        if p < 0:
+            p = p + 2 * dx
+        else:
+            p = p + 2 * dx - 2 * dy
+            x += 1
+    print("Intermediate Points are: ", all_points)
+    print("Decision Parameters are: ", all_p)
 
 
 def bresenham_line(point1, point2):
@@ -54,7 +74,7 @@ def main():
     print('\nBresenham Line Drawing Algorithm')
     # Test Purpose
     point1 = [1, 1]
-    point2 = [5, 8]
+    point2 = [8, 4]
     bresenham_line(point1, point2)
 
     # Actual Data
