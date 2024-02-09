@@ -8,7 +8,7 @@ def visual_show(all_points, point1, point2):
     plt.plot(x_coord, y_coord, marker='o', color='red')
     plt.xlabel("X-axis")
     plt.ylabel("Y-axis")
-    plt.title("Bresenham's Algorithm: Visuals")
+    plt.title(f"Line Between {point1} and {point2}")
     plt.grid(True)
     x = [point1[0], point2[0]]
     y = [point1[1], point2[1]]
