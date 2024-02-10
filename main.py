@@ -74,8 +74,10 @@ def bresenham_line(point1, point2):
     dy = y2 - y1
     dx = x2 - x1
     if dy < dx:
+        print('Case: 1')
         slope_less_than_one(point1, point2)
     else:
+        print('Case: 2')
         slope_greater_than_one(point1, point2)
 
 
