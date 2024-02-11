@@ -95,7 +95,7 @@ def bresenham_line(point1, point2):
 
 
 def main():
-    print('\nBresenham Line Drawing Algorithm')
+    print("\nBresenham's Line Drawing Algorithm")
     # Test Purpose
     point1 = [1, 1]
     point2 = [8, 4]
@@ -105,7 +105,7 @@ def main():
     point2 = [4, 8]
     bresenham_line(point1, point2)
 
-    # For User Input (Make sure, You have uncommented the Input method too)
+    # # For User Input (Make sure, You have uncommented the Input method too)
     # n = int(input('How many cases do you have?: '))
     # for i in range(n):
     #     inputCoordinates(i)
